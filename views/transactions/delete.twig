@@ -1,0 +1,43 @@
+<h1><a href="/transactions">Transactions</a></h1>
+<ul>
+	<li><a href="/">Home</a></li>
+	<li><a href="/transactions">Transactions</a></li>
+</ul>
+
+<form action="/transactions/delete" method="post">
+	<input type="hidden" name="confirmation" value="1"/>
+	<table>
+		<thead>
+			<tr>
+				<td>Selected</td>
+				<th>Datum</th>
+				<th>Tijd</th>
+				<th>Debiteur</th>
+				<th>Crediteur</th>
+				<th>Bedrag</th>
+				<th>Omschrijving</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td><input type="submit" value="Verwijderen"></td>
+			</tr>
+		</tfoot>
+		<tbody>
+		{% for transaction in transactions %}
+			<tr>
+				<td>
+					<input type="hidden" name="delete[]" value="{{transaction.id}}"/>
+					<input type="checkbox" checked disabled />
+				</td>
+				<td>{{ transaction.datetime|date('d-m-Y') }}</td>
+				<td>{{ transaction.datetime|date('H:i') }}</td>
+				<td>{{ transaction.debtor }}</td>
+				<td>{{ transaction.creditor }}</td>
+				<td>{{ transaction.amount }}</td>
+				<td>{{ transaction.description }}</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+</form>

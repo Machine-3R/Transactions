@@ -1,0 +1,28 @@
+version: "2"
+services:
+
+    web:
+        container_name: web
+        extends:
+            file: ../elan-docker-compose-suite/create/services.yml
+            service: elan56
+        ports:
+            - "5600:80"
+        volumes:
+            - ./html:/var/www/html
+
+    db:
+        container_name: db
+        extends:
+            file: ../elan-docker-compose-suite/create/services.yml
+            service: mysql57
+        ports:
+            - 3306:3306
+        environment:
+            MYSQL_ROOT_PASSWORD: example
+
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+            - 8080:8080
