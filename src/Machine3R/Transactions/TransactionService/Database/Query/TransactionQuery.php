@@ -1,6 +1,6 @@
 <?php
 
-namespace Machine3R\Transactions\Service\Database\Query;
+namespace Machine3R\Transactions\Service\TransactionService\Database\Query;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Query\QueryBuilder;

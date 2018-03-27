@@ -1,13 +1,13 @@
 <?php
 
-namespace Machine3R\Transactions\Provider;
+namespace Machine3R\Application\Provider;
 
 use Silex\Application;
 use Silex\Api\ControllerProviderInterface;
 use Silex\ControllerCollection;
-use Machine3R\Transactions\Service\Database\Query\TransactionQuery;
-use Machine3R\Transactions\Service\Database\TransactionService;
-use Machine3R\Transactions\Controller\TransactionController;
+use Machine3R\Application\Controller\TransactionController;
+use Machine3R\Transactions\Service\TransactionService\Database\TransactionService;
+use Machine3R\Transactions\Service\TransactionService\Database\Query\TransactionQuery;
 
 class TransactionControllerProvider implements ControllerProviderInterface {
 

@@ -2,11 +2,11 @@
 date_default_timezone_set('Europe/Amsterdam');
 require '../vendor/autoload.php';
 
-use Silex\Application;
+use Machine3R\Application\Application;
+use Machine3R\Application\Provider\TransactionControllerProvider;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\DoctrineServiceProvider;
 use Silex\Provider\ServiceControllerServiceProvider;
-use Machine3R\Transactions\Provider\TransactionControllerProvider;
 
 $config = require '../config/application.php';
 
