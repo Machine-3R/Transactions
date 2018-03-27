@@ -9,6 +9,7 @@
     },
 	"autoload": {
         "psr-4": {
+            "Machine3R\\Application\\": "src/Machine3R/Application",
             "Machine3R\\Transactions\\": "src/Machine3R/Transactions"
         }
     }

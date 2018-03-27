@@ -1,8 +1,8 @@
 <?php
-namespace Machine3R\Transactions\Service\Database;
+namespace Machine3R\Transactions\TransactionService\Database;
 
 use Doctrine\DBAL\Connection;
-use Machine3R\Transactions\Service\Database\Query\TransactionQuery;
+use Machine3R\Transactions\TransactionService\Database\Query\TransactionQuery;
 use DateTime;
 
 class TransactionService

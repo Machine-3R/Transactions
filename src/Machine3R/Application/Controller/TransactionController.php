@@ -1,11 +1,11 @@
 <?php
 
-namespace Machine3R\Transactions\Controller;
+namespace Machine3R\Application\Controller;
 
 use Silex\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-use Machine3R\Transactions\Service\Database\TransactionService;
+use Machine3R\Transactions\TransactionService\Database\TransactionService;
 use Twig_Environment;
 use DateTime;
 
