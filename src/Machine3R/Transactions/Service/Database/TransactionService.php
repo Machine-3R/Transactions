@@ -1,8 +1,8 @@
 <?php
-namespace Machine3R\Transactions\TransactionService\Database;
+namespace Machine3R\Transactions\Service\Database;
 
 use Doctrine\DBAL\Connection;
-use Machine3R\Transactions\TransactionService\Database\Query\TransactionQuery;
+use Machine3R\Transactions\Service\Database\Query\TransactionQuery;
 use DateTime;
 
 class TransactionService
@@ -44,6 +44,7 @@ class TransactionService
 	 * get always a transaction
 	 * @param integer $id
 	 * @return array
+	 * @deprecated
 	 */
 	public function getOne($id = null)
 	{

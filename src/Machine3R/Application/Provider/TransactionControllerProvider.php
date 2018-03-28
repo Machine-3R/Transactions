@@ -6,8 +6,8 @@ use Silex\Application;
 use Silex\Api\ControllerProviderInterface;
 use Silex\ControllerCollection;
 use Machine3R\Application\Controller\TransactionController;
-use Machine3R\Transactions\TransactionService\Database\TransactionService;
-use Machine3R\Transactions\TransactionService\Database\Query\TransactionQuery;
+use Machine3R\Transactions\Service\Database\TransactionService;
+use Machine3R\Transactions\Service\Database\Query\TransactionQuery;
 
 class TransactionControllerProvider implements ControllerProviderInterface {
 
